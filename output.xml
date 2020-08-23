@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200823 22:30:05.996" rpa="false">
+<suite id="s1" name="AutomationPractice" source="C:\Workspace_Python\AutomationPractice">
+<suite id="s1-s1" name="TestCases" source="C:\Workspace_Python\AutomationPractice\TestCases">
+<suite id="s1-s1-s1" name="AcceptanceTests" source="C:\Workspace_Python\AutomationPractice\TestCases\AcceptanceTests.robot">
+<test id="s1-s1-s1-t1" name="User can create an account">
+<kw name="Open the browser" library="AcceptanceTestsKeywords">
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Url_Site}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:06.388" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20200823 22:30:06.388" endtime="20200823 22:30:19.799"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200823 22:30:19.800" endtime="20200823 22:30:20.945"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:06.387" endtime="20200823 22:30:20.946"></status>
+</kw>
+<kw name="Click Sign_In" library="AcceptanceTestsKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Sign_In}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:20.952" level="INFO">Clicking link '//a[@class='login']'.</msg>
+<status status="PASS" starttime="20200823 22:30:20.948" endtime="20200823 22:30:23.712"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:20.947" endtime="20200823 22:30:23.713"></status>
+</kw>
+<kw name="Enter e_mail address" library="AcceptanceTestsKeywords">
+<arguments>
+<arg>${E_mail_Adress}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_Email_Adress}</arg>
+<arg>${E_mail_Adress}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:23.717" level="INFO">Typing text 'rrr@gmail.com' into text field 'id:email_create'.</msg>
+<status status="PASS" starttime="20200823 22:30:23.713" endtime="20200823 22:30:23.995"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:23.713" endtime="20200823 22:30:23.996"></status>
+</kw>
+<kw name="Click Create Account" library="AcceptanceTestsKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Create_Account}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:23.996" level="INFO">Clicking button 'id:SubmitCreate'.</msg>
+<status status="PASS" starttime="20200823 22:30:23.996" endtime="20200823 22:30:24.314"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200823 22:30:27.318" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200823 22:30:24.314" endtime="20200823 22:30:27.319"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:23.996" endtime="20200823 22:30:27.319"></status>
+</kw>
+<kw name="Select the title" library="AcceptanceTestsKeywords">
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>${radioB_Title}</arg>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:27.319" level="INFO">Selecting '2' from radio button 'id_gender'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200823 22:30:27.718" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-96.png"&gt;&lt;img src="selenium-screenshot-96.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200823 22:30:27.352" endtime="20200823 22:30:27.718"></status>
+</kw>
+<msg timestamp="20200823 22:30:27.720" level="FAIL">No radio button with name 'id_gender' and value '2' found.</msg>
+<status status="FAIL" starttime="20200823 22:30:27.319" endtime="20200823 22:30:27.720"></status>
+</kw>
+<status status="FAIL" starttime="20200823 22:30:27.319" endtime="20200823 22:30:27.722"></status>
+</kw>
+<status status="FAIL" starttime="20200823 22:30:06.386" endtime="20200823 22:30:27.722" critical="yes">No radio button with name 'id_gender' and value '2' found.</status>
+</test>
+<test id="s1-s1-s1-t2" name="User can login">
+<kw name="Enter Login Email" library="AcceptanceTestsKeywords">
+<arguments>
+<arg>${Login_Email_Adress}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_Login_Email_Adress}</arg>
+<arg>${Login_Email_Adress}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:27.726" level="INFO">Typing text 'rrr@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200823 22:30:27.725" endtime="20200823 22:30:27.944"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:27.725" endtime="20200823 22:30:27.946"></status>
+</kw>
+<kw name="Enter Login Password" library="AcceptanceTestsKeywords">
+<arguments>
+<arg>${Login_Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_Login_Password}</arg>
+<arg>${Login_Password}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:27.950" level="INFO">Typing text '123ml' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20200823 22:30:27.947" endtime="20200823 22:30:28.108"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:27.947" endtime="20200823 22:30:28.108"></status>
+</kw>
+<kw name="Click on the SignIn button" library="AcceptanceTestsKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Login_Sign_In}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:28.114" level="INFO">Clicking button 'id:SubmitLogin'.</msg>
+<status status="PASS" starttime="20200823 22:30:28.113" endtime="20200823 22:30:29.673"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:28.108" endtime="20200823 22:30:29.674"></status>
+</kw>
+<kw name="Verify the successfull authentication" library="AcceptanceTestsKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>My account</arg>
+</arguments>
+<msg timestamp="20200823 22:30:29.707" level="INFO">Current page contains text 'My account'.</msg>
+<status status="PASS" starttime="20200823 22:30:29.674" endtime="20200823 22:30:29.707"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:29.674" endtime="20200823 22:30:29.708"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:27.724" endtime="20200823 22:30:29.708" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="User can add a product in the cart">
+<kw name="Click on the tab Women" library="AcceptanceTestsKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_Women}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:29.712" level="INFO">Clicking link 'class:sf-with-ul'.</msg>
+<status status="PASS" starttime="20200823 22:30:29.711" endtime="20200823 22:30:31.853"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:29.711" endtime="20200823 22:30:31.854"></status>
+</kw>
+<kw name="Click on Add To Cart" library="AcceptanceTestsKeywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${container_hover}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:31.856" level="INFO">Simulating Mouse Over on element 'class:product-container'.</msg>
+<status status="PASS" starttime="20200823 22:30:31.855" endtime="20200823 22:30:31.941"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${link_AddToCart}</arg>
+</arguments>
+<status status="PASS" starttime="20200823 22:30:31.942" endtime="20200823 22:30:32.033"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_AddToCart}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:32.035" level="INFO">Clicking link '//*[@id="center_column"]/ul/li[1]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200823 22:30:32.034" endtime="20200823 22:30:32.126"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:31.854" endtime="20200823 22:30:32.126"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200823 22:30:37.783" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-97.png"&gt;&lt;img src="selenium-screenshot-97.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200823 22:30:37.297" endtime="20200823 22:30:37.783"></status>
+</kw>
+<msg timestamp="20200823 22:30:37.784" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20200823 22:30:32.126" endtime="20200823 22:30:37.784"></status>
+</kw>
+<status status="FAIL" starttime="20200823 22:30:29.710" endtime="20200823 22:30:37.784" critical="yes">Alert not found in 5 seconds.</status>
+</test>
+<test id="s1-s1-s1-t4" name="User can checkout">
+<kw name="Click on checkout buttons" library="AcceptanceTestsKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Proceed_to_checkout1}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:37.789" level="INFO">Clicking link '//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a'.</msg>
+<status status="PASS" starttime="20200823 22:30:37.789" endtime="20200823 22:30:39.155"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Proceed_to_checkout2}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:39.156" level="INFO">Clicking link '//*[@id="center_column"]/p[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200823 22:30:39.155" endtime="20200823 22:30:41.118"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Proceed_to_checkout3}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:41.119" level="INFO">Clicking button 'name:processAddress'.</msg>
+<status status="PASS" starttime="20200823 22:30:41.118" endtime="20200823 22:30:42.210"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${chBox_Agreement}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:42.213" level="INFO">Selecting checkbox 'id:cgv'.</msg>
+<status status="PASS" starttime="20200823 22:30:42.211" endtime="20200823 22:30:42.412"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Proceed_to_checkout4}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:42.414" level="INFO">Clicking button 'name:processCarrier'.</msg>
+<status status="PASS" starttime="20200823 22:30:42.413" endtime="20200823 22:30:43.737"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_Pay_By_Bank_Wire}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:43.739" level="INFO">Clicking link 'class:bankwire'.</msg>
+<status status="PASS" starttime="20200823 22:30:43.738" endtime="20200823 22:30:44.627"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_Confirm_My_Order}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:44.630" level="INFO">Clicking button '//*[@id="cart_navigation"]/button'.</msg>
+<status status="PASS" starttime="20200823 22:30:44.628" endtime="20200823 22:30:46.250"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Your order on My Store is complete</arg>
+</arguments>
+<msg timestamp="20200823 22:30:46.279" level="INFO">Current page contains text 'Your order on My Store is complete'.</msg>
+<status status="PASS" starttime="20200823 22:30:46.251" endtime="20200823 22:30:46.279"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:37.789" endtime="20200823 22:30:46.279"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:37.787" endtime="20200823 22:30:46.279" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="User can see the order listed in his profile">
+<kw name="Click on Orders" library="AcceptanceTestsKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_BackToOrders}</arg>
+</arguments>
+<msg timestamp="20200823 22:30:46.282" level="INFO">Clicking link '//*[@id="center_column"]/p/a'.</msg>
+<status status="PASS" starttime="20200823 22:30:46.282" endtime="20200823 22:30:48.345"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Order history</arg>
+</arguments>
+<msg timestamp="20200823 22:30:48.394" level="INFO">Current page contains text 'Order history'.</msg>
+<status status="PASS" starttime="20200823 22:30:48.346" endtime="20200823 22:30:48.394"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:46.282" endtime="20200823 22:30:48.395"></status>
+</kw>
+<status status="PASS" starttime="20200823 22:30:46.281" endtime="20200823 22:30:48.396" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20200823 22:30:06.088" endtime="20200823 22:30:48.398"></status>
+</suite>
+<status status="FAIL" starttime="20200823 22:30:06.081" endtime="20200823 22:30:48.403"></status>
+</suite>
+<status status="FAIL" starttime="20200823 22:30:06.044" endtime="20200823 22:30:48.408"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="2">Critical Tests</stat>
+<stat pass="3" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="2" id="s1" name="AutomationPractice">AutomationPractice</stat>
+<stat pass="3" fail="2" id="s1-s1" name="TestCases">AutomationPractice.TestCases</stat>
+<stat pass="3" fail="2" id="s1-s1-s1" name="AcceptanceTests">AutomationPractice.TestCases.AcceptanceTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200823 22:30:05.981" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' ${Login_Password}' in file 'C:\Workspace_Python\AutomationPractice\TestCases\AcceptanceTests.robot' on line 30.</msg>
+<msg timestamp="20200823 22:30:06.373" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' Enter Password' in file 'C:\Workspace_Python\AutomationPractice\Ressources\AcceptanceTestsKeywords.robot' on line 43.</msg>
+</errors>
+</robot>
