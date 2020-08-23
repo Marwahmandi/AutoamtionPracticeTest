@@ -102,7 +102,7 @@ Click on Add To Cart
   Mouse Over    ${container_hover}
   Wait Until Element Is Visible     ${link_AddToCart}     
   Click Link    ${link_AddToCart} 
-  
+ #Click 
         
 #User can checkout keywords
 Click on checkout buttons
